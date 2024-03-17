@@ -2,12 +2,33 @@
 
 
 {% block titulo %}
-<title>Productos</title>
+
 {% endblock titulo %}
 
 <!-- Contenido específico de la página -->
 {% block icontenido %}
+<title>Productos</title>
+
 <h2> Productos disponibles para entrega</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Marca</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for p in productos  %}
+        <tr>
+            <td>{{ p.nombre }}</td>
+            <td>{{ p.precio }}</td>
+            <td>{{ p.marca }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
 {% endblock icontenido %}
 
 

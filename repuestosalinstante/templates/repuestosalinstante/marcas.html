@@ -2,12 +2,32 @@
 
 
 {% block titulo %}
-<title>Marcas</title>
+
 {% endblock titulo %}
 
 <!-- Contenido específico de la página -->
 {% block icontenido %}
-<h2>Estas son las marcas con las que  trabajamos </h2>
+<title>Marcas</title>
+
+<h2> Estas son algunas de las marcas con las que trabajamos </h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Pais de origen</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for m in marcas  %}
+        <tr>
+            <td>{{ m.nombre }}</td>
+            <td>{{ m.pais_origen }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
 {% endblock icontenido %}
 
 

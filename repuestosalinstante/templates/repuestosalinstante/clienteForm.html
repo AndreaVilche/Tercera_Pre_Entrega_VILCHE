@@ -1,0 +1,25 @@
+
+{% extends "repuestosalinstante/index.html" %}
+
+{% block titulo %}
+
+{% endblock titulo %}
+
+{% block icontenido %}
+
+<h1 class="mb-5">Clientes (formulario)</h1>
+    
+<form action="" method="post">
+    {% csrf_token %}
+    <!-- Comentario  -->
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Guardar">
+</form>
+
+{% endblock icontenido %}
+
+{% block Contenido %}
+
+{% endblock Contenido %}

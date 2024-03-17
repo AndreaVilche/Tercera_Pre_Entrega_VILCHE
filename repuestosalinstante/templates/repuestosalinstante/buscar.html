@@ -1,0 +1,22 @@
+{% extends "repuestosalinstante/index.html" %}
+
+{% block titulo %}
+
+
+{% endblock titulo %}
+
+{% block icontenido %}
+
+<h1 class="mb-5">Buscar Productos</h1>
+
+<form action="{% url 'encontrar_productos' %}" method="get">
+    {% csrf_token %}
+    <p>Ingrese el nombre del producto deseado: <input type="text" name="buscar" id="buscar"></p>
+    <input type="submit" value="Buscar">
+</form>
+
+{% endblock icontenido %}
+
+{% block Contenido %}
+
+{% endblock Contenido %}
