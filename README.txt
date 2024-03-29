@@ -1,5 +1,7 @@
 Proyecto: Tienda online de venta de repuestos
 
+Video de introducción al proyecto: https://youtu.be/QmsGzqueyVM
+
 Creadora: Andrea Vilche
 
 Fecha:28/03/2024
