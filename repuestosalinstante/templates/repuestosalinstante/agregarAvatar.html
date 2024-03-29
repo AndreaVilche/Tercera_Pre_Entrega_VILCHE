@@ -1,0 +1,27 @@
+{% extends "repuestosalinstante/index.html" %}
+
+
+{% block titulo %}
+
+{% endblock titulo %}
+
+
+{% block icontenido %}
+    
+<h1 class="mb-5">Avatar</h1>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Actualizar Avatar">
+</form>
+
+{% endblock icontenido %}
+
+
+
+{% block Contenido %}
+
+{% endblock Contenido %}
+    

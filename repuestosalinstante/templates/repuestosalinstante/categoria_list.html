@@ -6,15 +6,14 @@
 {% endblock titulo %}
 
 <!-- Contenido específico de la página -->
-
 {% block icontenido %}
 
 <table>
     <tr>
-        <td width="200"><h2>Marcas</h2></td>
+        <td width="200"><h2>Categorias</h2></td>
         <td>
             <a
-            href="{% url 'marca_create' %}"
+            href="{% url 'create_categoria' %}"
             class="btn btn-primary btn-sm"
             ><i class="fa fa-plus fa-lg" title="Crear"> </i>
             </a>
@@ -22,32 +21,34 @@
     </tr>
 </table>
 
-<title>Marcas</title>
+<title>Categorias</title>
 
-<h2> Estas son algunas de las marcas con las que trabajamos </h2>
+<h2> En esta lista se presentan cada una de nuestras categorias de productos </h2>
 
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Nombre</th>
-            <th>Pais de origen</th>
+            <th>Categoria</th>
+            <th>Descripcion</th>
+            <th>Marca</th>
         </tr>
     </thead>
     <tbody>
-    {% for m in marcas  %}
+    {% for c in categoria_list  %}
         <tr>
-            <td>{{ m.nombre }}</td>
-            <td>{{ m.pais_origen }}</td>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.descripcion }}</td>
+            <td>{{ c.marca }}</td>
 
             <td>
                 <a
-                  href="{% url 'marca_update' m.id %}"
+                  href="{% url 'update_categoria' c.id %}"
                   class="btn btn-primary"
                   style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
                   ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
                 </a>
                 <a
-                  href="{% url 'marca_delete' m.id %}"
+                  href="{% url 'delete_categoria' c.id %}"
                   class="btn btn-danger"
                   style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
                   ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
